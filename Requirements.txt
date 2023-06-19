@@ -1,0 +1,31 @@
+Environment Requirements:
+
+Python 3.7.16
+Pytorch 1.12.1 (cuda11.3 cudnn8.3.2_0)
+Pytorch-cuda 11.6
+keras 2.6.0
+nibabel 4.0.2
+numpy 1.19.2
+torchio 0.18.87
+monai 1.1.0
+
+Training Step:
+
+1. Pretraining the Pretext model step by step via 'Pretext_model_pretraining_of_BAR.ipynb'
+The input MRI scans and their corresponding segmentation (the ground truth) are inputs.
+The inputs can be changed to other MRI scans by modifying the 'Preparing for data reading' section.
+Data augmentation can be set in 'Define Training Transforms' section.
+
+2. Finetuning the downstream model via 'Downstream_model_finetuning_of_BAR.ipynb'.
+
+The inputs, outputs, and pretext model loading can be set in the 'Model Training and Test' section.
+
+The training\test set is defined through .csv file, with the following format:
+,mripath,labels,sites
+0,./data/MRI_Scan0.nii.gz,0,1
+1,./data/MRI_Scan1.nii.gz,0,1
+2,./data/MRI_Scan2.nii.gz,0,0
+3,./data/MRI_Scan3.nii.gz,0,0
+4,./data/MRI_Scan4.nii.gz,1,1
+
+Note: the .nii and .nii.gz file formats are supported.
