@@ -2,7 +2,7 @@
 
 # BAR
 
-## _Source code for our paper on MICCAI 2023, "Brain Anatomy-Guided MRI Analysis for Assessing Clinical Progression of Cognitive Impairment with Structural MRI"
+## Source code for our paper on MICCAI 2023, "Brain Anatomy-Guided MRI Analysis for Assessing Clinical Progression of Cognitive Impairment with Structural MRI"
 
 
 
